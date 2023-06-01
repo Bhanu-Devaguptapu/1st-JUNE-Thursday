@@ -1,0 +1,22 @@
+//bubble sorting of array elements
+#include<stdio.h>
+main(){
+	int arr[]={1,4,3,5,2};
+	int len=sizeof(arr)/sizeof(int);
+	int t,i,pass;
+	void bubsort(int arr[],int len);
+	bubsort(arr,len);
+}
+void bubsort(int arr[],int len){
+	int i,pass,t;
+	for(pass=0;pass<=len;pass++){
+	for(i=0;i<len-1;i++){
+		if(arr[i]>arr[i+1]){
+			t=arr[i];
+			arr[i]=arr[i+1];
+			arr[i+1]=t;
+		}
+	}}
+	for(i=0;i<len;i++)
+	printf("%d",arr[i]);
+}
