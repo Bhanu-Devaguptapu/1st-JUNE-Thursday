@@ -1,0 +1,23 @@
+// selection sort of elements in array
+#include<stdio.h>
+main(){
+	int arr[]={2,4,5,3,1};
+	int len=sizeof(arr)/sizeof(int),t,i,j;
+	void sort(int arr[],int len,int i,int j);
+	sort(arr,len,i,j);
+}
+	void sort(int arr[],int len,int i,int j){
+	int t;
+	for(i=0;i<len-1;i++){
+		for(j=i+1;j<len;j++){
+			if(arr[i]>arr[j]){
+			t=arr[i];
+			arr[i]=arr[j];
+			arr[j]=t;
+			}
+			
+		}
+	}
+	for(i=0;i<len ;i++)
+	printf("%d",arr[i]);
+}
